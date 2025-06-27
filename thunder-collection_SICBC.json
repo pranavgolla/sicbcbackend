@@ -1,0 +1,159 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "SICBC",
+    "collectionId": "471d728d-84ec-4220-863c-1483610faddc",
+    "dateExported": "2025-06-27T05:28:06.928Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "48b78f83-96bf-4fdb-bb7b-bdc2e1d17b5b",
+            "name": "Admin",
+            "containerId": "",
+            "created": "2025-06-27T01:32:17.450Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "6071bed3-6def-4d5e-8562-5e7ae998a4a4",
+            "name": "Principal",
+            "containerId": "",
+            "created": "2025-06-27T01:32:28.777Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "5c4b48ba-f1c9-4d52-958c-a48402a0dfc7",
+            "colId": "471d728d-84ec-4220-863c-1483610faddc",
+            "containerId": "48b78f83-96bf-4fdb-bb7b-bdc2e1d17b5b",
+            "name": "AdminRegister",
+            "url": "http://localhost:5000/sicbc/admin/register",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2025-06-27T05:07:52.087Z",
+            "modified": "2025-06-27T05:08:40.835Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"p\",\n  \"phone\": \"9999999999\",\n  \"email\": \"p@example.com\",\n  \"password\": \"securepass123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "a0daf121-5f8d-4482-aaa2-d85d30cd22fd",
+            "colId": "471d728d-84ec-4220-863c-1483610faddc",
+            "containerId": "48b78f83-96bf-4fdb-bb7b-bdc2e1d17b5b",
+            "name": "AdminGet",
+            "url": "http://localhost:5000/sicbc/admin/get",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2025-06-27T05:12:32.867Z",
+            "modified": "2025-06-27T05:19:08.361Z",
+            "headers": []
+        },
+        {
+            "_id": "b908586c-311c-4265-8f87-38356dfbbe38",
+            "colId": "471d728d-84ec-4220-863c-1483610faddc",
+            "containerId": "48b78f83-96bf-4fdb-bb7b-bdc2e1d17b5b",
+            "name": "AdminLogin",
+            "url": "http://localhost:5000/sicbc/admin/login",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2025-06-27T05:19:28.281Z",
+            "modified": "2025-06-27T05:19:56.892Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"k@example.com\",\n  \"password\": \"securepass123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8e3646ed-2c30-4b05-82f5-f4894a88265a",
+            "colId": "471d728d-84ec-4220-863c-1483610faddc",
+            "containerId": "48b78f83-96bf-4fdb-bb7b-bdc2e1d17b5b",
+            "name": "AdminUpdatePassword",
+            "url": "http://localhost:5000/sicbc/admin/update-password",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2025-06-27T05:20:18.142Z",
+            "modified": "2025-06-27T05:20:51.919Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"k@example.com\",\n  \"newpassword\": \"securepass123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ee4451fc-611e-429f-a433-76de85ae51a3",
+            "colId": "471d728d-84ec-4220-863c-1483610faddc",
+            "containerId": "6071bed3-6def-4d5e-8562-5e7ae998a4a4",
+            "name": "PrincipalCreate",
+            "url": "http://localhost:5000/sicbc/principal/create",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2025-06-27T05:22:19.197Z",
+            "modified": "2025-06-27T05:22:52.742Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Prof. eavi Desai\",\n    \"email\": \"eavi@intercollege.edu\",\n    \"phone\": \"9823456123\",\n    \"password\": \"Ravi@123\",\n    \"institutionType\": \"Inter College\",\n    \"designation\": \"Principal\",\n    \"department\": \"Administration\",\n    \"campus\": \"B\"\n  }",
+                "form": []
+            }
+        },
+        {
+            "_id": "7e2a12a7-71a3-4f53-a040-f5173276ca18",
+            "colId": "471d728d-84ec-4220-863c-1483610faddc",
+            "containerId": "6071bed3-6def-4d5e-8562-5e7ae998a4a4",
+            "name": "PrincipalGetAll",
+            "url": "http://localhost:5000/sicbc/principal/all",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2025-06-27T05:23:37.966Z",
+            "modified": "2025-06-27T05:23:46.031Z",
+            "headers": []
+        },
+        {
+            "_id": "f101ddbf-5f47-4f93-91b6-6b2ae5edaa15",
+            "colId": "471d728d-84ec-4220-863c-1483610faddc",
+            "containerId": "6071bed3-6def-4d5e-8562-5e7ae998a4a4",
+            "name": "PrincipalById",
+            "url": "http://localhost:5000/sicbc/principal/685da4457b9e3c9fc2c66a1e",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2025-06-27T05:24:00.192Z",
+            "modified": "2025-06-27T05:24:31.093Z",
+            "headers": []
+        },
+        {
+            "_id": "32b80993-f644-45b2-ad50-83265fd91e77",
+            "colId": "471d728d-84ec-4220-863c-1483610faddc",
+            "containerId": "6071bed3-6def-4d5e-8562-5e7ae998a4a4",
+            "name": "PrincipalDeleteById",
+            "url": "http://localhost:5000/sicbc/principal/delete/685da4457b9e3c9fc2c66a1e",
+            "method": "DELETE",
+            "sortNum": 170000,
+            "created": "2025-06-27T05:25:10.258Z",
+            "modified": "2025-06-27T05:25:43.867Z",
+            "headers": []
+        },
+        {
+            "_id": "8260320e-b6bb-4856-b433-3a49a9b5aabb",
+            "colId": "471d728d-84ec-4220-863c-1483610faddc",
+            "containerId": "6071bed3-6def-4d5e-8562-5e7ae998a4a4",
+            "name": "PrincipalUpdateById",
+            "url": "http://localhost:5000/sicbc/principal/update/685e2aac039d2f359e2def35",
+            "method": "PUT",
+            "sortNum": 180000,
+            "created": "2025-06-27T05:26:49.698Z",
+            "modified": "2025-06-27T05:27:31.081Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"gthyujios\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "Ppx6xI2jSJAbCk_lI2Ul_r57YT7ppUAiO_fw0N6SENMIr7FcAGE0KgxTjl2gOVWaOinzxeeepckQ4yCVJ2mVdQ"
+}
