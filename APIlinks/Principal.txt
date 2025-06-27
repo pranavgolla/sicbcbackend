@@ -1,0 +1,9 @@
+|  # | Method   | Endpoint                                                                               | Description                     |
+| -: | -------- | -------------------------------------------------------------------------------------- | ------------------------------- |
+|  1 | `POST`   | [`/register`](http://localhost:5000/sicbc/principal/register)                          | Create/Register a new principal |
+|  2 | `GET`    | [`/get`](http://localhost:5000/sicbc/principal/get)                                    | Get all principals              |
+|  3 | `GET`    | [`/get/:id`](http://localhost:5000/sicbc/principal/get/60f6f8bfe13c4b2d88c8a123)       | Get one principal by ID         |
+|  4 | `PUT`    | [`/update/:id`](http://localhost:5000/sicbc/principal/update/60f6f8bfe13c4b2d88c8a123) | Update a principal’s details    |
+|  5 | `DELETE` | [`/delete/:id`](http://localhost:5000/sicbc/principal/delete/60f6f8bfe13c4b2d88c8a123) | Delete a principal by ID        |
+|  6 | `POST`   | [`/login`](http://localhost:5000/sicbc/principal/login)                                | Login principal                 |
+|  7 | `PUT`    | [`/update-password`](http://localhost:5000/sicbc/principal/update-password)            | Update password by email        |

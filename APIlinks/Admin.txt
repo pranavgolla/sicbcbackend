@@ -1,0 +1,10 @@
+| # | Method   | Endpoint                                                                                                                         | Description                             |
+| - | -------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| 1 | `POST`   | [`http://localhost:5000/sicbc/admin/register`](http://localhost:5000/sicbc/admin/register)                                       | Register a new admin                    |
+| 2 | `POST`   | [`http://localhost:5000/sicbc/admin/login`](http://localhost:5000/sicbc/admin/login)                                             | Admin login                             |
+| 3 | `PUT`    | [`http://localhost:5000/sicbc/admin/update-password`](http://localhost:5000/sicbc/admin/update-password)                         | Update admin password                   |
+| 4 | `GET`    | [`http://localhost:5000/sicbc/admin/get`](http://localhost:5000/sicbc/admin/get)                                                 | Get all admins                          |
+| 5 | `GET`    | [`http://localhost:5000/sicbc/admin/get?email=example@email.com`](http://localhost:5000/sicbc/admin/get?email=example@email.com) | Get admin by email (query param)        |
+| 6 | `GET`    | [`http://localhost:5000/sicbc/admin/get/:id`](http://localhost:5000/sicbc/admin/get/:id)                                         | Get admin by ID                         |
+| 7 | `DELETE` | [`http://localhost:5000/sicbc/admin/delete/:id`](http://localhost:5000/sicbc/admin/delete/:id)                                   | Delete admin by ID                      |
+| 8 | `PUT`    | [`http://localhost:5000/sicbc/admin/update/:id`](http://localhost:5000/sicbc/admin/update/:id)                                   | Update admin by ID (name, phone, email) |

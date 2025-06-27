@@ -1,26 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const {
-  CreatePrincipalSICBC,
-  GetAllPrincipalsSICBC,
-  GetPrincipalByIdSICBC,
-  UpdatePrincipalSICBC,
-  DeletePrincipalSICBC,
-} = require("../../controllers/Principal/PrincipalController");
+const PrincipalController = require("../../controllers/Principal/PrincipalController");
 
-// CREATE
-router.post("/create", CreatePrincipalSICBC);
+// Main route: /sicbc/principal
 
-// READ ALL
-router.get("/all", GetAllPrincipalsSICBC);
-
-// READ ONE
-router.get("/:id", GetPrincipalByIdSICBC);
-
-// UPDATE
-router.put("/update/:id", UpdatePrincipalSICBC);
-
-// DELETE
-router.delete("/delete/:id", DeletePrincipalSICBC);
+router.post("/register", PrincipalController.CreatePrincipalSICBC);
+router.get("/get", PrincipalController.GetAllPrincipalsSICBC);
+router.get("/get/:id", PrincipalController.GetPrincipalByIdSICBC);
+router.put("/update/:id", PrincipalController.UpdatePrincipalSICBC);
+router.delete("/delete/:id", PrincipalController.DeletePrincipalSICBC);
+router.post("/login", PrincipalController.LoginPrincipalSICBC);
+router.put("/update-password", PrincipalController.UpdatePasswordPrincipalSICBC);
 
 module.exports = router;

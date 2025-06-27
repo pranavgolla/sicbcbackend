@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const dotEnv = require("dotenv");
 const AdminRoutes=require('./routes/Admin/AdminRoutes')
-const principalRoutes=require('./routes/Principal/principalRoutes')
+const PrincipalRoutes=require('./routes/Principal/principalRoutes')
+const HodRoutes=require('./routes/Hod/HodRoutes')
+const ProfessorRoutes=require('./routes/Professor/ProfessorRoutes')
 //const routes=require('./routes/practice/r')
 
 const bodyParser=require('body-parser')
@@ -25,7 +27,10 @@ mongoose
 
  
 app.use("/sicbc/admin",AdminRoutes)
-app.use("/sicbc/principal",principalRoutes)
+app.use("/sicbc/principal",PrincipalRoutes)
+app.use("/sicbc/hod",HodRoutes)
+app.use('/sicbc/professor',ProfessorRoutes)
+
 
 
 app.listen(5000, () => {

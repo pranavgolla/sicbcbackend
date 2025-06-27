@@ -1,0 +1,9 @@
+|  # | Method   | Endpoint           | Full URL                                                                                    | Description                  |
+| -: | -------- | ------------------ | ------------------------------------------------------------------------------------------- | ---------------------------- |
+|  1 | `POST`   | `/register`        | [`/sicbc/hod/register`](http://localhost:5000/sicbc/hod/register)                           | Register a new HOD           |
+|  2 | `POST`   | `/login`           | [`/sicbc/hod/login`](http://localhost:5000/sicbc/hod/login)                                 | Login with email & password  |
+|  3 | `GET`    | `/get`             | [`/sicbc/hod/get`](http://localhost:5000/sicbc/hod/get)                                     | Get all HODs                 |
+|  4 | `GET`    | `/get/:id`         | [`/sicbc/hod/get/<id>`](http://localhost:5000/sicbc/hod/get/60f6f8bfe13c4b2d88c8a123)       | Get HOD by ID                |
+|  5 | `PUT`    | `/update/:id`      | [`/sicbc/hod/update/<id>`](http://localhost:5000/sicbc/hod/update/60f6f8bfe13c4b2d88c8a123) | Update HOD by ID             |
+|  6 | `DELETE` | `/delete/:id`      | [`/sicbc/hod/delete/<id>`](http://localhost:5000/sicbc/hod/delete/60f6f8bfe13c4b2d88c8a123) | Delete HOD by ID             |
+|  7 | `PUT`    | `/update-password` | [`/sicbc/hod/update-password`](http://localhost:5000/sicbc/hod/update-password)             | Update HOD password by email |

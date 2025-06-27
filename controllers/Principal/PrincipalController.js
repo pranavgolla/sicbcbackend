@@ -92,10 +92,50 @@ const DeletePrincipalSICBC = async (req, res) => {
   }
 };
 
+// LOGIN
+const LoginPrincipalSICBC = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const principal = await PrincipalRegister.findOne({ email });
+
+    if (!principal) return res.status(404).json({ message: "Principal not found" });
+
+    const isMatch = await bcrypt.compare(password, principal.password);
+    if (!isMatch) return res.status(400).json({ message: "Invalid credentials" });
+
+    res.status(200).json({ message: "Login successful", principal });
+  } catch (error) {
+    console.error("Error during principal login:", error);
+    res.status(500).json({ message: "Server error during login" });
+  }
+};
+
+// UPDATE PASSWORD
+const UpdatePasswordPrincipalSICBC = async (req, res) => {
+  try {
+    const { email, newpassword } = req.body;
+
+    const principal = await PrincipalRegister.findOne({ email });
+    if (!principal) return res.status(404).json({ message: "Principal not found" });
+
+    const hashedPassword = await bcrypt.hash(newpassword, 10);
+    principal.password = hashedPassword;
+    await principal.save();
+
+    res.status(200).json({ message: "Password updated successfully" });
+  } catch (error) {
+    console.error("Error updating password:", error);
+    res.status(500).json({ message: "Server error while updating password" });
+  }
+};
+
 module.exports = {
   CreatePrincipalSICBC,
   GetAllPrincipalsSICBC,
   GetPrincipalByIdSICBC,
   UpdatePrincipalSICBC,
   DeletePrincipalSICBC,
+  LoginPrincipalSICBC,
+  UpdatePasswordPrincipalSICBC,
 };
+

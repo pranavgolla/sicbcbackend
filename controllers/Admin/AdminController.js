@@ -94,9 +94,70 @@ const GetAdminSICBC = async (req, res) => {
   }
 };
 
+// Get admin by ID
+const GetAdminByIdSICBC = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const admin = await AdminRegister.findById(id).select("-password");
+    if (!admin) {
+      return res.status(404).json({ message: "Admin not found" });
+    }
+
+    res.status(200).json(admin);
+  } catch (error) {
+    console.log(`Error in GetAdminByIdSICBC: ${error}`);
+    res.status(500).json({ message: "Server error while fetching admin by ID" });
+  }
+};
+
+// Delete admin by ID
+const DeleteAdminByIdSICBC = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deletedAdmin = await AdminRegister.findByIdAndDelete(id);
+    if (!deletedAdmin) {
+      return res.status(404).json({ message: "Admin not found" });
+    }
+
+    res.status(200).json({ message: "Admin deleted successfully" });
+  } catch (error) {
+    console.log(`Error in DeleteAdminByIdSICBC: ${error}`);
+    res.status(500).json({ message: "Server error while deleting admin" });
+  }
+};
+
+// Update admin by ID
+const UpdateAdminByIdSICBC = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { name, phone, email } = req.body;
+
+    const updatedAdmin = await AdminRegister.findByIdAndUpdate(
+      id,
+      { name, phone, email },
+      { new: true, runValidators: true }
+    ).select("-password");
+
+    if (!updatedAdmin) {
+      return res.status(404).json({ message: "Admin not found" });
+    }
+
+    res.status(200).json({ message: "Admin updated successfully", admin: updatedAdmin });
+  } catch (error) {
+    console.log(`Error in UpdateAdminByIdSICBC: ${error}`);
+    res.status(500).json({ message: "Server error while updating admin" });
+  }
+};
+
 module.exports = {
   CreateAdminRegisterSICBC,
   UpdatePasswordAdminSICBC,
   LoginAdminSICBC,
   GetAdminSICBC,
+  GetAdminByIdSICBC,
+  DeleteAdminByIdSICBC,
+  UpdateAdminByIdSICBC,
 };
+

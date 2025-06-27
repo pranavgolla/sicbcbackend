@@ -1,0 +1,9 @@
+|  # | Method   | Endpoint           | Full URL                                                                                                       | Description                         |
+| -: | -------- | ------------------ | -------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+|  1 | `POST`   | `/register`        | [http://localhost:5000/sicbc/professor/register](http://localhost:5000/sicbc/professor/register)               | Register a new professor            |
+|  2 | `POST`   | `/login`           | [http://localhost:5000/sicbc/professor/login](http://localhost:5000/sicbc/professor/login)                     | Login professor                     |
+|  3 | `GET`    | `/get`             | [http://localhost:5000/sicbc/professor/get](http://localhost:5000/sicbc/professor/get)                         | Get all professors                  |
+|  4 | `GET`    | `/get/:id`         | `http://localhost:5000/sicbc/professor/get/<professor_id>`                                                     | Get professor by ID                 |
+|  5 | `PUT`    | `/update/:id`      | `http://localhost:5000/sicbc/professor/update/<professor_id>`                                                  | Update professor by ID              |
+|  6 | `DELETE` | `/delete/:id`      | `http://localhost:5000/sicbc/professor/delete/<professor_id>`                                                  | Delete professor by ID              |
+|  7 | `PUT`    | `/update-password` | [http://localhost:5000/sicbc/professor/update-password](http://localhost:5000/sicbc/professor/update-password) | Update professor password via email |
