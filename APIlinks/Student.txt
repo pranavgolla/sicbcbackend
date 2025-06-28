@@ -1,0 +1,9 @@
+| Method | Full Endpoint URL                                     | Description             |
+| ------ | ----------------------------------------------------- | ----------------------- |
+| POST   | `http://localhost:5000/sicbc/student/register`        | Register a new student  |
+| POST   | `http://localhost:5000/sicbc/student/login`           | Login student           |
+| PUT    | `http://localhost:5000/sicbc/student/update-password` | Update student password |
+| GET    | `http://localhost:5000/sicbc/student/get`             | Get all students        |
+| GET    | `http://localhost:5000/sicbc/student/get/:id`         | Get student by ID       |
+| PUT    | `http://localhost:5000/sicbc/student/update/:id`      | Update student by ID    |
+| DELETE | `http://localhost:5000/sicbc/student/delete/:id`      | Delete student by ID    |

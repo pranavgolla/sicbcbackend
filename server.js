@@ -5,6 +5,11 @@ const AdminRoutes=require('./routes/Admin/AdminRoutes')
 const PrincipalRoutes=require('./routes/Principal/principalRoutes')
 const HodRoutes=require('./routes/Hod/HodRoutes')
 const ProfessorRoutes=require('./routes/Professor/ProfessorRoutes')
+const labInchargeRoutes = require("./routes/LabIncharge/LabInchargeRoutes");
+const studentRoutes = require("./routes/Student/StudentRoutes");
+const guardianRoutes = require("./routes/Guardian/GuardianRoutes");
+
+
 //const routes=require('./routes/practice/r')
 
 const bodyParser=require('body-parser')
@@ -30,6 +35,9 @@ app.use("/sicbc/admin",AdminRoutes)
 app.use("/sicbc/principal",PrincipalRoutes)
 app.use("/sicbc/hod",HodRoutes)
 app.use('/sicbc/professor',ProfessorRoutes)
+app.use("/sicbc/labincharge", labInchargeRoutes)
+app.use("/sicbc/student", studentRoutes);
+app.use("/sicbc/guardian", guardianRoutes);
 
 
 

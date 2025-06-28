@@ -1,0 +1,9 @@
+| Method | Full Endpoint URL                                      | Description              |
+| ------ | ------------------------------------------------------ | ------------------------ |
+| POST   | `http://localhost:5000/sicbc/guardian/register`        | Register a new guardian  |
+| POST   | `http://localhost:5000/sicbc/guardian/login`           | Login guardian           |
+| PUT    | `http://localhost:5000/sicbc/guardian/update-password` | Update guardian password |
+| GET    | `http://localhost:5000/sicbc/guardian/get`             | Get all guardians        |
+| GET    | `http://localhost:5000/sicbc/guardian/get/:id`         | Get guardian by ID       |
+| PUT    | `http://localhost:5000/sicbc/guardian/update/:id`      | Update guardian by ID    |
+| DELETE | `http://localhost:5000/sicbc/guardian/delete/:id`      | Delete guardian by ID    |
